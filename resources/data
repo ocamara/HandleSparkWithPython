@@ -1,0 +1,3 @@
+"id","name","telephone","salary","date","json"
+"1";"data";"06. 08. 07 89. 28";"2 500.00";"12-03-2017 20:25:00";{"id":"12","adresse":{"num":"44", "rue":"rue de Paris"},"formation":{"ecole":{"nom":"paris-9","adresse":{"num":"11","rue":"avenue de france"}},"niveau":"master"}}
+"1";"data";"06. 08. 07 89. 28";"2 500.00";"12-03-2017 20:25:00";"kk{"id":"12","adresse":{"num":"44", "rue":"rue de Paris"}}
