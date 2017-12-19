@@ -64,3 +64,12 @@ def create_schema(columns):
         field = create_field(column[0], column[1])
         types.append(field)
     return StructType(types)
+
+
+def get_dict(ref, input, list=[]):
+    for key in input.keys():
+        data = input [key]
+        if type(data) is types.DictType:
+            get_dict(ref+ key,data,list)
+        else:
+            list.extend([(ref + key,data)])
