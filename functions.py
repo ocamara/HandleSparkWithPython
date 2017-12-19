@@ -66,7 +66,7 @@ def create_schema(columns):
     return StructType(types)
 
 
-def get_dict(ref, input, list=[]):
+def convert_json_to_list(ref, input, list=[]):
     for key in input.keys():
         data = input [key]
         if type(data) is types.DictType:
@@ -76,7 +76,7 @@ def get_dict(ref, input, list=[]):
 
 """input = {"id": "12", "Adresse": {"num": "44", "Rue": "rue de Paris"}, "Formation": {"Ecole":{"Nom": "ecole", "Adresse": {"Num": "11", "rue":"rue"}}, "Niveau": "Master"}}
 res=[]
-get_dict("",input,res)
+convert_json_to_list("",input,res)
 print(res)
 [('FormationNiveau', 'Master'), ('FormationEcoleNom', 'ecole'), ('FormationEcoleAdresseNum', '11'), ('FormationEcoleAdresserue', 'rue'), ('Adressenum', '44'), ('AdresseRue', 'rue de Paris'), ('id', '12')]
 """
